@@ -3,26 +3,131 @@
 <html>
 <head>
 	<title>Test</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		.container{
+			display: flex;
+			flex-wrap: wrap;
+
+		}
+		.container > div{
+			background-color: springgreen;
+			font-size: 20px;
+			margin: 20px;
+			padding: 20px;
+			width: 200px;
+		}
+
+		.grid{
+		background-color: lightgreen;
+		display: grid;
+		padding: 20px;
+		grid-column-gap:20px;
+		grid-row-gap:10px;
+		grid-template-columns: 100px auto auto auto;		
+		}
+
+		.grid-item{
+			background-color: white;
+			font-size: 20px;
+		}
+
+		@media (min-width: 750px){
+			body{
+				background-color: lightgray;
+			}
+			input[type=text]
+			{
+				background-color: lightgreen;
+			}
+		}			
+		@media (max-width: 749px){
+			body{
+				background-color: lightgreen;
+			}
+			input[type=text]
+			{
+				background-color: darkgray
+			}
+		}
+		
+		ol > li{
+			color: red;
+		}
+		
+		button{
+			width: 100px;height: 30px;font-size: 24px;background-color: lightgreen;
+		}
+		button:hover{
+			background-color: springgreen;
+		}
+		a::before{
+			content: "\21d2  Click Here : ";
+		}
+		#Info{
+			font-weight: bold;
+		}
+		.Item{
+			font-family: Arial;
+		}
+		.screen-only{
+			@media print{
+				.screen-only{
+					display: none; 
+				}
+			}
+		}
+	</style>
 </head>
 <body>
-	Open Hello Page : 
+	<a href="hello.html"></a>
+	<div>
+		<input type="text" name="name" placeholder="Full Name">
+		<input type="password" name="password" placeholder="Password">
+		<input type="number" name="number" placeholder="Contact Number">
+	</div>	
+	<div>
+		Favorite Color ?
+		<input type="radio" name="color" value="red">Red
+		<input type="radio" name="color" value="green">Green
+	</div>
+	<div>
+		<input list="countries" name="country" placeholder="Country">
+		<datalist id="countries">
+			<option value="India">
+		    <option value="Australia">
+		</datalist>
+	</div>
+	<div>
+		<button>Click!</button>
+	</div>
+	<div>
+		<ol>
+			<li class="Item">List Item 1</li>
+			<li class="Item">List Item 2</li>
+			<ul>
+				<li id="Info" class="Item">Info</li>
+				<li class="Item"><a href="#">Unorder list item 1</a></li>
+				<li class="Item"><a href="#">Unorder list item 2</a></li>
+			</ul>
+			<li class="Item">List Item 3</li>
+		</ol>
+	</div>
+	<div>
+		<p class="screen-only">Won't be visible when printing this page</p>
+	</div>
 
-	<a href="hello.html">Click Here!</a>
-
-	<h2>Table of Contents</h2>
-	<ul>
-		<li><a href="#section1">Section 1</a></li>
-		<li><a href="#section2">Section 2</a></li>
-	</ul>
-
-	<h2 id="section1">Section 1</h2>
-		<p>
-			This is First Para
-		</p>
-	<h2 id="section2">Section 2</h2>
-	<p> 
-		This is Second Para
-	</p>
+	<div class="container">
+		<div>A. This is First Box</div>
+		<div>B. This is Second Box</div>
+		<div>C. This is Third Box</div>
+	</div>
+	<div class="grid">
+		<div class="grid-item">1</div>
+		<div class="grid-item">2</div>
+		<div class="grid-item">3</div>
+		<div class="grid-item">4</div>
+	</div>
 </body>
 </html>
-
