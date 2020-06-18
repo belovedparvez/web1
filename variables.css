@@ -1,0 +1,25 @@
+ul {
+  color: blue;
+}
+
+ol {
+  color: blue;
+  font-size: 18px;
+}
+
+.success, .warning {
+  font-family: Arial;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+
+.warning {
+  background-color: lightgreen;
+}
+
+.success {
+  background-color: lightblue;
+}
+
+/*# sourceMappingURL=variables.css.map */
