@@ -1,0 +1,25 @@
+$color:blue;
+
+ul { 
+    color: $color;  
+}
+ol {
+    color: $color;
+    font-size: 18px;
+}
+
+%message{
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.warning{
+    @extend %message;
+    background-color: lightgreen;
+}
+.success{
+    @extend %message;
+    background-color: lightblue;
+}
